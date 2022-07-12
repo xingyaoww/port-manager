@@ -9,7 +9,7 @@ def get_netstat_df():
     # and 2nd line ("Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name")
     netstat_outputs = output.stdout.decode().split("\n")[2:-1]
     netstat_col_names = ["Protocol", "Recv-Q", "Send-Q", "Local Address", "Foreign Address", "State", "PID/Program name"]
-    netstat_df = pd.DataFrame(list(map(lambda x: x.split(), netstat_outputs[1:])), columns=netstat_col_names)
+    netstat_df = pd.DataFrame(list(map(lambda x: x.split(), netstat_outputs)), columns=netstat_col_names)
 
     # Seperately Visualize TCP & UDP
     _udp = netstat_df["Protocol"].str.startswith("udp")
