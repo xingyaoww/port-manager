@@ -1,0 +1,10 @@
+name: port-manager
+channels:
+  - defaults
+dependencies:
+  - pip
+  - python=3.10
+  - pip:
+    - streamlit
+    - pandas
+prefix: /home/xingyaow/miniconda3/envs/port-manager
