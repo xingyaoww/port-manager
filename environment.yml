@@ -7,4 +7,5 @@ dependencies:
   - pip:
     - streamlit
     - pandas
+    - streamlit-aggrid
 prefix: /home/xingyaow/miniconda3/envs/port-manager
